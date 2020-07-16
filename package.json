@@ -11,12 +11,17 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "@types/react-router-dom": "^5.1.5",
+    "@types/styled-components": "^5.1.1",
+    "babel-plugin-styled-components": "^1.10.7",
     "firebase": "^7.16.0",
+    "jest-transform-stub": "^2.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "typescript": "~3.7.2"
+    "styled-components": "^5.1.1",
+    "typescript": "~3.7.2",
+    "wait-for-expect": "^3.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
