@@ -1,18 +1,20 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { useAuth, AuthContext } from "../auth/context";
 
-// Firebase config
-import { firebaseConfig } from "../firebase.config";
-import * as firebase from "firebase/app";
-require("firebase/analytics");
+// Pages
+import LandingPage from "../pages/landing";
+import AppPage from "../pages/app";
+
+import "../assets/css/bootstrap.min.css";
 
 const App = () => {
-  useEffect(() => {
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-  }, []);
+  const auth = useAuth();
 
-  return <p>Hello world!</p>;
+  return (
+    <AuthContext.Provider value={auth}>
+      {auth.isAuthenticated ? <AppPage /> : <LandingPage />}
+    </AuthContext.Provider>
+  );
 };
 
 export default App;
