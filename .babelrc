@@ -1,0 +1,12 @@
+{
+  "presets": ["next/babel"],
+  "plugins": [["styled-components", { "ssr": true }]],
+  "env": {
+    "production": {
+      "plugins": [
+        ["react-remove-properties", {"properties": ["data-testid"]}],
+        ["styled-components", { "ssr": true, "displayName": false }],
+      ]
+    }
+  }
+}
