@@ -1,15 +1,3 @@
-import React from "react";
-import { useAuthContext } from "../../auth/context";
+import MainContainer from "./containers/MainContainer";
 
-const AppPage = () => {
-  const { logout } = useAuthContext();
-
-  return (
-    <div>
-      <p>App</p>
-      <button onClick={logout}>Sign out</button>
-    </div>
-  );
-};
-
-export default AppPage;
+export default MainContainer;
